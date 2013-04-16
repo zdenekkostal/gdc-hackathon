@@ -1,0 +1,177 @@
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.l-primary {
+    width: 946px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.l-container {
+    @include clearfix();
+    position: relative;
+    clear: both;
+    width: 100%;
+}
+
+@for $i from 2 through 12 {
+    .l-col-#{$i} {
+        float: left;
+        width: 8.3333333333333333% * $i;
+    }
+}
+
+/* General layout rules
+   ========================================================================== */
+
+.l-list {
+    > * {
+        display: block;
+        list-style: none;
+        width: auto;
+    }
+}
+
+.l-table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.l-table-row, .l-table > li {
+    display: table-row;
+}
+
+.l-table-cell {
+    display: table-cell;
+}
+
+@for $i from 0 through 20 {
+  .l-table-cell-#{$i * 5} { width: 5% * $i; }
+}
+
+.l-line {
+    > * {
+        display: inline-block;
+    }
+}
+
+/* ==========================================================================
+   Layout utils, credit: bootstrap
+   ========================================================================== */
+
+// IE10 Metro responsive
+// Required for Windows 8 Metro split-screen snapping with IE10
+// Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+@-ms-viewport{
+    width: device-width;
+}
+
+.is-hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.is-shown {
+    display: block !important;
+}
+
+/* Desktops
+   ========================================================================== */
+
+@include desktop {
+
+    .is-visible-phone {
+        display: none !important;
+    }
+
+    .is-visible-tablet {
+        display: none !important;
+    }
+
+    .is-hidden-phone {}
+
+    .is-hidden-tablet {}
+
+    .is-hidden-desktop {
+        display: none !important;
+    }
+
+    .is-visible-desktop {
+        display: inherit !important;
+    }
+
+}
+
+/* Tablets & small desktops
+   ========================================================================== */
+
+@include tablet {
+
+    // Hide everything else
+    .is-hidden-desktop {
+        display: inherit !important;
+    }
+
+    .is-visible-desktop {
+        display: none !important;
+    }
+
+    // Show
+    .is-visible-tablet {
+        display: inherit !important;
+    }
+
+    // Hide
+    .is-hidden-tablet {
+        display: none !important;
+    }
+
+}
+
+/* Phones
+   ========================================================================== */
+
+@include phone {
+
+    // Hide everything else
+    .is-hidden-desktop    {
+        display: inherit !important;
+    }
+
+    .is-visible-desktop   {
+        display: none !important;
+    }
+
+    // Show
+    .is-visible-phone {
+        display: inherit !important; // Use inherit to restore previous behavior
+    }
+
+    // Hide
+    .is-hidden-phone {
+        display: none !important;
+    }
+
+}
+
+/* Print
+   ========================================================================== */
+
+.is-visible-print {
+    display: none !important;
+}
+
+.is-hidden-print {}
+
+@include print {
+    .is-visible-print  {
+        display: inherit !important;
+    }
+
+    .is-hidden-print   {
+        display: none !important;
+    }
+}
