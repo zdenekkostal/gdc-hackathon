@@ -17,6 +17,7 @@
 
 @for $i from 2 through 12 {
     .l-col-#{$i} {
+        @extend %sandboxed;
         float: left;
         width: 8.3333333333333333% * $i;
     }
@@ -54,7 +55,10 @@
 
 .l-line {
     > * {
+        float: none;
         display: inline-block;
+        margin-right: -2px;
+        vertical-align: middle;
     }
 }
 

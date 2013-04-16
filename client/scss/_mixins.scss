@@ -2,6 +2,10 @@
    Mixins
    ========================================================================== */
 
+%sandboxed {
+    box-layout: border-box;
+}
+
 @mixin desktop {
     @media (min-width: 980px) {
         @content;
@@ -16,6 +20,12 @@
 
 @mixin phone {
     @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin tablet-and-phone {
+    @media (max-width: 979px) {
         @content;
     }
 }
@@ -92,12 +102,12 @@
 }
 
 @mixin selection($color, $background) {
-    &::selection {
+    ::-moz-selection {
         color: $color;
         background: $background;
     }
 
-    &::-moz-selection {
+    ::selection {
         color: $color;
         background: $background;
     }
@@ -122,5 +132,20 @@
     // Internet Explorer 10+
     &:-ms-input-placeholder {
         color: $color;
+    }
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
     }
 }
