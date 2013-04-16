@@ -45,7 +45,7 @@ a {
         right: 0;
         top: 0;
         bottom: 0;
-        z-index: 0;
+        z-index: 5;
         opacity: 0;
         background: url("../design/design.png") 50% 0 no-repeat;
     }
@@ -78,9 +78,13 @@ h2 {
     }
 }
 
-.headline-section {
-    @extend %separated-top;
+.headline {
     padding: 15px 0;
+}
+
+.headline-section {
+    @extend .headline;
+    @extend %separated-top;
 }
 
 /* ==========================================================================
@@ -157,10 +161,11 @@ h2 {
 
 .goodpoints {
     min-height: 140px;
-    padding: 80px 0;
+    padding: 65px 0;
 }
 
 .goodpoints-info {
+    margin-top: -30px;
     font-size: 36px;
     text-transform: none;
 }
@@ -169,6 +174,7 @@ h2 {
     @extend %muted;
     line-height: 1;
     text-align: right;
+    letter-spacing: 5px;
     font-size: 167px;
 
     @include transition(.2s color ease-in-out);
@@ -182,11 +188,44 @@ h2 {
 }
 
 /* ==========================================================================
+   Progressbar
+   ========================================================================== */
+
+@include keyframes(progressbar) {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.progressbar {
+    width: 100%;
+
+    &, & > div {
+        height: 7px;
+        background: #343942 url('../images/progressbar.png') 0 0 repeat;
+    }
+
+    > div {
+        background-color: $important-color;
+        -webkit-animation-duration: 3s;
+        -webkit-animation-name: progressbar;
+        -webkit-animation-iteration-count: infinite;
+    }
+}
+
+/* ==========================================================================
    Schedule
    ========================================================================== */
 
 .schedule-headline {
-    @extend %separated-top;
     padding: 15px 25px;
     text-transform: none;
     font-size: 24px;
@@ -242,6 +281,14 @@ h2 {
 //         display: block;
 //     }
 // }
+
+/* ==========================================================================
+   Repos
+   ========================================================================== */
+
+.repos {
+
+}
 
 /* General layout rules
    ========================================================================== */
