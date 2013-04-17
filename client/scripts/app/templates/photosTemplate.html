@@ -1,13 +1,10 @@
 <div class="photos l-col-8">
-    <h2 class="headline-section">Photos <small>of #goohack photos</small></h2>
+    <h2 class="headline-section">Photos <small>of #gdhackathon photos</small></h2>
 
     <ul class="photoItems">
-        <li><a href="#"><img src="images/something.jpg" width="140" height="140" alt=""></a></li>
-        <li><a href="#"><img src="images/something.jpg" width="140" height="140" alt=""></a></li>
-        <li><a href="#"><img src="images/something.jpg" width="140" height="140" alt=""></a></li>
-        <li><a href="#"><img src="images/something.jpg" width="140" height="140" alt=""></a></li>
-        <li><a href="#"><img src="images/something.jpg" width="140" height="140" alt=""></a></li>
-        <li><a href="#"><img src="images/something.jpg" width="140" height="140" alt=""></a></li>
+        {{#each content}}
+            <li><a {{bindAttr href="instagramLink"}}><img {{bindAttr src="lowRes"}} width="140" height="140" alt=""></a></li>
+        {{/each}}
     </ul>
 
     <button class="ico"><span class="ss-camera"></span> TwitPic</button>
