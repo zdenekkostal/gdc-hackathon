@@ -8,6 +8,9 @@ define([
         "views/ActionsView",
         "controllers/ActionsController",
 
+        "views/ProgressBarView",
+        "controllers/ProgressBarController",
+
         "views/RepoView",
         "controllers/RepoController",
 
@@ -32,6 +35,8 @@ define([
 
         ActionsView, ActionsController,
 
+        ProgressBarView, ProgressBarController,
+
         RepoView, RepoController,
 
         SchedulesView, SchedulesController, ScheduleController,
@@ -55,6 +60,9 @@ define([
 
                 ActionsView: ActionsView,
                 ActionsController: ActionsController,
+
+                ProgressBarView: ProgressBarView,
+                ProgressBarController: ProgressBarController,
 
                 RepoView: RepoView,
                 RepoController: RepoController,
