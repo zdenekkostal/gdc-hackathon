@@ -14,6 +14,9 @@ define([
         "views/PhotosView",
         "controllers/PhotosController",
 
+        "views/GoodPointsView",
+        "controllers/GoodPointsController",
+
 	"app/router"
 ], function(
         ApplicationView, ApplicationController,
@@ -24,6 +27,8 @@ define([
         TwitterView, TwitterController,
 
         PhotosView, PhotosController,
+
+        GoodPointsView, GoodPointsController,
 
         Router){
 
@@ -43,6 +48,9 @@ define([
 
                 PhotosView: PhotosView,
                 PhotosController: PhotosController,
+
+                GoodPointsView: GoodPointsView,
+                GoodPointsController: GoodPointsController,
 
 		Router: Router
 	};
