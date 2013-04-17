@@ -1,18 +1,15 @@
-define(["ember"], function(Ember){
-	var RepoController = Ember.Controller.extend({
-        content: [ ],
-
+define(["ember"], function(Ember) {
+    var RepoController = Ember.Controller.extend({
+        content: [],
         init: function() {
             this._super();
-            this.set('content', this.findAll());
+            this.findAll();
         },
-
         findAll: function() {
-            return [
-                { url: 'Repo/url/1'},
-                { url: 'Repo/url/3'}
-            ]
+            Ember.$.get('http://localhost:8844/repo', function(data) {
+                this.set('content', data);
+            }.bind(this));
         }
     });
-	return RepoController;
+    return RepoController;
 });

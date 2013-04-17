@@ -1,6 +1,7 @@
 Instal dependencies:
 
-npm install connect
+npm install express
+npm install http-proxy
 
 Run server:
 
