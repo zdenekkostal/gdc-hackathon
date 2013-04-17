@@ -9,7 +9,13 @@
             <td><div class="progress" style="width: 82%;">8.2</div></td>
         </tr>
     {{/each}}
+    <tr class="editable">
+        <th>
+        {{view Ember.TextField class="full" valueBinding="repo" placeholder="Your repo here"}}
+        </th>
+        <td><button {{action submitRepo repo}} type="submit">Submit repo</button></td>
+    </tr>
     </table>
 
-    <button class="ico"><span class="ss-plus"></span> Add repo/branch</button>
+    <!--button class="ico"><span class="ss-plus"></span> Add repo/branch</button-->
 </div>

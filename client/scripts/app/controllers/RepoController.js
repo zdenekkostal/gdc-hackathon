@@ -1,5 +1,5 @@
 define(["ember"], function(Ember) {
-    var RepoController = Ember.Controller.extend({
+    var RepoController = Ember.ArrayController.extend({
         content: [],
         init: function() {
             this._super();
@@ -9,7 +9,15 @@ define(["ember"], function(Ember) {
             Ember.$.get('http://localhost:8844/repo', function(data) {
                 this.set('content', data);
             }.bind(this));
+        },
+
+        submitRepo: function(repo) {
+            var repoPayload = { "url": repo };
+            Ember.$.post("http://localhost:8844/repo", repoPayload).done(function() {
+                this.get('content').pushObject(repoPayload);
+            }.bind(this));
         }
+
     });
     return RepoController;
 });
