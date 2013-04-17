@@ -1,0 +1,15 @@
+{
+  "name": "gdc-hackathon",
+  "version": "0.0.1",
+  "description": "GDC hackathon portal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zdenekkostal/gdc-hackathon"
+  },
+  "author": "GoodPeople",
+  "license": "BSD",
+  "gitHead": "99b570cbab03bf2d95b1a8943c6513e8de971b47",
+  "dependencies": {
+    "connect": "~2.7.6"
+  }
+}
