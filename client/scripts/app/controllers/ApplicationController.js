@@ -13,7 +13,8 @@ define(["ember"], function(Ember){
     });
 
     Ember.Handlebars.registerBoundHelper('floor', function(value, options) {
-        return value? Math.floor(value) : '';
+        value = value || 0;
+        return Math.floor(value);
     });
 
     Ember.Handlebars.registerBoundHelper('rest', function(value, options) {

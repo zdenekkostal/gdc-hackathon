@@ -352,6 +352,7 @@ h2 {
     }
 
     th {
+        @include text-overflow();
         text-align: left;
         font-size: 36px;
 
