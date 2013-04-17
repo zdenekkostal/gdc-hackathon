@@ -3,15 +3,12 @@
 
     <table class="repos-list">
 
+    {{#each content}}
         <tr>
-            <th><a href="#">sokolik/vertica-migration</a></th>
+            <th><a href="#">{{url}}</a></th>
             <td><div class="progress" style="width: 82%;">8.2</div></td>
         </tr>
-
-        <tr>
-            <th><a href="#">mc/hubertizer-upgrade</a></th>
-            <td><div class="progress" style="width: 23%;">2.3</div></td>
-        </tr>
+    {{/each}}
     </table>
 
     <button class="ico"><span class="ss-plus"></span> Add repo/branch</button>
