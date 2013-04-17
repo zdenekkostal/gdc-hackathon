@@ -2,6 +2,7 @@ $page-background: #1d232c;
 $line-color: #343941;
 $hightlighted-color: #a1bde3;
 $important-color: #fbc91e;
+$box-background: #343941;
 
 %muted {
     color: #494d55;
@@ -42,18 +43,38 @@ a {
     }
 }
 
-button {
+%form-item {
     height: 40px;
-    margin-right: 10px;
     padding: 0 10px;
     border: none;
     line-height: 40px;
     font: bold 18px $primary-font;
+
+    @include transition(.1s all ease-in-out);
+    @include border-radius(5px);
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+input {
+    @extend %form-item;
+    color: #fff;
+    background: $box-background;
+
+    &.full {
+        @extend %sandboxed;
+        width: 100%;
+    }
+}
+
+button {
+    @extend %form-item;
+    margin-right: 10px;
     color: #1d232c;
     background: $button-background;
     cursor: pointer;
-    @include transition(.1s all ease-in-out);
-    @include border-radius(5px);
 
     &:hover,
     &:focus,
@@ -267,7 +288,7 @@ h2 {
     border-right: 1px solid $page-background;
     font-size: 16px;
     color: #fff;
-    background: #343941;
+    background: $box-background;
 
     > table {
         table-layout: fixed;
