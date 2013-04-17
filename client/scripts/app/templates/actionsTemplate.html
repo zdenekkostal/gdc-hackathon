@@ -1,0 +1,17 @@
+{{#if currentAction}}
+{{#with currentAction}}
+<dl class="action-now l-col-4">
+    <dt>Now</dt>
+    <dd>{{title}}</dd>
+</dl>
+{{/with}}
+{{/if}}
+
+{{#if nextAction}}
+{{#with nextAction}}
+<dl class="action-next l-col-4">
+    <dt>Next</dt>
+    <dd>{{title}}</dd>
+</dl>
+{{/with}}
+{{/if}}

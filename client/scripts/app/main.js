@@ -5,8 +5,15 @@ define([
         "views/CoffeeView",
         "controllers/CoffeeController",
 
+        "views/ActionsView",
+        "controllers/ActionsController",
+
         "views/RepoView",
         "controllers/RepoController",
+
+        "views/SchedulesView",
+        "controllers/SchedulesController",
+        "controllers/ScheduleController",
 
         "views/TwitterView",
         "controllers/TwitterController",
@@ -17,12 +24,17 @@ define([
         "views/GoodPointsView",
         "controllers/GoodPointsController",
 
+        "controllers/TimeController",
 	"app/router"
 ], function(
         ApplicationView, ApplicationController,
         CoffeeView, CoffeeController,
 
+        ActionsView, ActionsController,
+
         RepoView, RepoController,
+
+        SchedulesView, SchedulesController, ScheduleController,
 
         TwitterView, TwitterController,
 
@@ -30,6 +42,7 @@ define([
 
         GoodPointsView, GoodPointsController,
 
+        TimeController,
         Router){
 
         /*Module Pattern*/
@@ -40,8 +53,15 @@ define([
                 CoffeeView: CoffeeView,
                 CoffeeController: CoffeeController,
 
+                ActionsView: ActionsView,
+                ActionsController: ActionsController,
+
                 RepoView: RepoView,
                 RepoController: RepoController,
+
+                SchedulesView: SchedulesView,
+                SchedulesController: SchedulesController,
+                ScheduleController: ScheduleController,
 
                 TwitterView: TwitterView,
                 TwitterController: TwitterController,
@@ -52,6 +72,7 @@ define([
                 GoodPointsView: GoodPointsView,
                 GoodPointsController: GoodPointsController,
 
+                TimeController: TimeController,
 		Router: Router
 	};
 

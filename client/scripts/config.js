@@ -2,7 +2,7 @@ define({
     app_name: "MyExampleApp",
     shim: {
         'ember': {
-            deps: ['handlebars', 'jquery'],
+            deps: ['handlebars', 'jquery', 'date'],
             exports: 'Ember'
         }
     },
@@ -16,6 +16,7 @@ define({
         'jquery': 'libs/jquery/1.9.1/jquery',
         'handlebars': 'libs/handlebars/1.0.rc.3/handlebars',
         'ember': 'libs/ember/1.0.0-rc.2/ember',
+        'date': 'libs/date.format',
         /*requirejs-plugins*/
         'text': 'libs/requirejs-plugins/text',
         'hbs': 'libs/requirejs-plugins/hbs',

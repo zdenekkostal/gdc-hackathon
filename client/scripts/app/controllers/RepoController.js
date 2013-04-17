@@ -7,6 +7,10 @@ define(["ember"], function(Ember) {
         },
         findAll: function() {
             Ember.$.get('http://localhost:8844/repo', function(data) {
+                data.forEach(function(repo) {
+                    repo.name = repo.url.replace('https://github.com/', '');
+                });
+
                 this.set('content', data);
             }.bind(this));
         },

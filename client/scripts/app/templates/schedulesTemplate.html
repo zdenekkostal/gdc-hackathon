@@ -1,0 +1,20 @@
+<div class="l-separated l-container">
+    {{#each content}}
+        <div class="l-col-4">
+        <h2 class="schedule-headline is-schedule-actual">{{day date}} <small>{{date date}}</small></h2>
+
+        <div class="schedule">
+            <table>
+                {{#each actions itemController="Schedule"}}
+                <tr {{bindAttr class="cssClass"}}>
+                    {{#with content}}
+                        <th>{{time start}}</th>
+                        <td>{{title}}</td>
+                    {{/with}}
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+    {{/each}}
+</div>
