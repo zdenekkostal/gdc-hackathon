@@ -1,4 +1,199 @@
-<h1>GD Hack page</h1>
-{{render Coffee}}
 
-{{render Repo}}
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html lang="cs" class="ie ie8"> <![endif]-->
+<!--[if lt IE 10 ]><html lang="cs" class="ie ie9"> <![endif]-->
+<!--[if (gt IE 10)|!(IE)]><!--><html lang="cs"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="author" content="GoodPeople">
+    <meta name="copyright" content="Copyright © 2008 - 2013 GoodData Corporation. All rights reserved.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GoodHack</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="fonts/ss-pika.css" media="screen">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <script data-main="./scripts/main" src="./scripts/libs/requirejs/2.1.2/require.js"></script>
+</head>
+<body>
+        <div class="l-primary">
+            <div class="header l-container">
+                <small class="header-date">April 18-20, 2013</small>
+
+                <div class="header-title l-col-4">
+                    <h1>Good<span>Hack</span></h1>
+                </div>
+
+                <dl class="action-now l-col-4">
+                    <dt>Now</dt>
+                    <dd>NERF Battle</dd>
+                </dl>
+
+                <dl class="action-next l-col-4">
+                    <dt>In 2 hours</dt>
+                    <dd>Dinner</dd>
+                </dl>
+            </div>
+
+            <div class="goodpoints l-container l-line">
+                <div class="l-col-4">
+                    <h2 class="goodpoints-info">GoodnessPoints gained</h2>
+                </div>
+
+                <div class="goodpoints-points l-col-8">
+                    <strong>3246</strong>.00
+                </div>
+            </div>
+
+            <div class="progressbar l-container">
+                <div style="width: 26%;"></div>
+            </div>
+
+            <div class="l-separated l-container">
+                <div class="l-col-4">
+                    <h2 class="schedule-headline is-schedule-actual">Thursday <small>18th April</small></h2>
+
+                    <div class="schedule">
+                        <table>
+                            <tr class="is-schedule-past">
+                                <th>08.00</th>
+                                <td>Registration</td>
+                            </tr>
+
+                            <tr class="is-schedule-past">
+                                <th>09.00</th>
+                                <td>Breakfast</td>
+                            </tr>
+
+                            <tr class="is-schedule-past">
+                                <th>12.00</th>
+                                <td>Lunch</td>
+                            </tr>
+
+                            <tr class="is-schedule-actual">
+                                <th>16.00</th>
+                                <td>NERF Battle</td>
+                            </tr>
+
+                            <tr>
+                                <th>18.00</th>
+                                <td>Dinner</td>
+                            </tr>
+
+                            <tr>
+                                <th>21.00</th>
+                                <td>Hunting Grumpy cat</td>
+                            </tr>
+
+                            <tr>
+                                <th>23.30</th>
+                                <td>Midnight pizza</td>
+                            </tr>
+
+                            <tr>
+                                <th>02.00</th>
+                                <td>Scooter rallye</td>
+                            </tr>
+
+                            <tr>
+                                <th>04.00</th>
+                                <td>GoodNap</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="l-col-4">
+                    <h2 class="schedule-headline">Friday <small>19th April</small></h2>
+
+                    <div class="schedule">
+                        <table>
+                            <tr>
+                                <th>08.00</th>
+                                <td>Office run</td>
+                            </tr>
+
+                            <tr>
+                                <th>09.00</th>
+                                <td>Breakfast</td>
+                            </tr>
+
+                            <tr>
+                                <th>12.00</th>
+                                <td>Lunch</td>
+                            </tr>
+
+                            <tr>
+                                <th>14.00</th>
+                                <td>NERF Battle: Revenge</td>
+                            </tr>
+
+                            <tr>
+                                <th>16.00</th>
+                                <td>Show, tell &amp; eat</td>
+                            </tr>
+
+                            <tr>
+                                <th>18.00</th>
+                                <td>Beer time</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="l-col-4">
+                    <h2 class="schedule-headline">Saturday <small>19th April</small></h2>
+
+                    <div class="schedule is-schedule-decorated">
+                        <table>
+                            <tr>
+                                <th>09.00</th>
+                                <td>Morning sunshine</td>
+                            </tr>
+
+                            <tr>
+                                <th>10.00</th>
+                                <td>Afterparty on rails</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            {{render repo}}
+
+            {{render coffee}}
+
+            <div class="l-separated l-container">
+
+                {{render twitter}}
+
+                {{render photos}}
+
+            </div>
+
+            <div class="l-separated l-container">
+                <h2 class="headline-section">Join us</h2>
+
+                <div class="text-important l-col-8 l-offset-4">
+                    Fancy joining us next time?<br>
+                    Get <a href="#">goodjob@gooddata.com</a>
+                </div>
+            </div>
+
+            <div class="footer l-separated">
+                <p>Icons by Jeremy Bristol and Juan Pablo Bravo,<br>
+                from The Noun Project.</p>
+            </div>
+
+        </div>
+
+        <script src="lib/ss-standard/ss-standard.js"></script>
+</body>
+</html>

@@ -8,12 +8,22 @@ define([
         "views/RepoView",
         "controllers/RepoController",
 
+        "views/TwitterView",
+        "controllers/TwitterController",
+
+        "views/PhotosView",
+        "controllers/PhotosController",
+
 	"app/router"
 ], function(
         ApplicationView, ApplicationController,
         CoffeeView, CoffeeController,
 
         RepoView, RepoController,
+
+        TwitterView, TwitterController,
+
+        PhotosView, PhotosController,
 
         Router){
 
@@ -27,6 +37,12 @@ define([
 
                 RepoView: RepoView,
                 RepoController: RepoController,
+
+                TwitterView: TwitterView,
+                TwitterController: TwitterController,
+
+                PhotosView: PhotosView,
+                PhotosController: PhotosController,
 
 		Router: Router
 	};
