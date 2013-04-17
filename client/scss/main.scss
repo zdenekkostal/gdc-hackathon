@@ -193,18 +193,18 @@ h2 {
 
 @include keyframes(progressbar) {
     0% {
-        opacity: 1;
         @include box-shadow(0 0 10px $important-color);
+        opacity: 1;
     }
 
     50% {
-        opacity: .5;
         @include box-shadow(0 0 0 $important-color);
+        opacity: .5;
     }
 
     100% {
-        opacity: 1;
         @include box-shadow(0 0 10px $important-color);
+        opacity: 1;
     }
 }
 
@@ -302,7 +302,7 @@ h2 {
     line-height: 1;
 
     th, td {
-        padding: 24px 0 11px;
+        padding: 24px 0 13px;
         border-bottom: 1px solid #333941;
     }
 
