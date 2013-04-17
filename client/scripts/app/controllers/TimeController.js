@@ -13,7 +13,7 @@ define(["ember"], function(Ember){
 
         currentTime: function() {
             return this.get('actualTime') + this.get('offset');
-        }.property('offset'),
+        }.property('actualTime', 'offset'),
 
         _scheduleTimeRefresh: function() {
             Em.run.later(this, this._setTime, 1000);

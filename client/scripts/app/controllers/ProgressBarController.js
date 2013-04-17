@@ -13,14 +13,14 @@ define(["ember"], function(Ember){
             } else if (currentTime > end) {
                 return 100;
             } else {
-                return Math.floor((currentTime - start) / (end - start) * 100);
+                return (currentTime - start) / (end - start);
             }
         }.property('controllers.schedules.firstAction', 'controllers.schedules.lastAction', 'controllers.time.currentTime'),
 
         style: function() {
             var progress = this.get('progress');
 
-            return 'width: ' + progress + '%';
+            return 'width: ' + Math.floor(progress * 100) + '%';
         }.property('progress')
     });
     return ProgressBarController;
