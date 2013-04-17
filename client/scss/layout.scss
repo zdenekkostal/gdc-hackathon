@@ -15,11 +15,19 @@
     width: 100%;
 }
 
+.l-separated {
+    margin-bottom: 65px;
+}
+
 @for $i from 2 through 12 {
     .l-col-#{$i} {
         @extend %sandboxed;
         float: left;
         width: 8.3333333333333333% * $i;
+    }
+
+    .l-offset-#{$i} {
+        margin-left: 8.3333333333333333% * $i;
     }
 }
 

@@ -1,5 +1,6 @@
 $page-background: #1d232c;
 $line-color: #343941;
+$hightlighted-color: #a1bde3;
 $important-color: #fbc91e;
 
 %muted {
@@ -7,7 +8,7 @@ $important-color: #fbc91e;
 }
 
 %highlighted {
-    color: #a1bde3;
+    color: $hightlighted-color;
 }
 
 %separated {
@@ -33,6 +34,12 @@ body {
 
 a {
     @extend %highlighted;
+
+    &:hover,
+    &:focus
+    &:active {
+        color: $important-color;
+    }
 }
 
 .l-primary {
@@ -51,6 +58,42 @@ a {
     }
 }
 
+button {
+    height: 40px;
+    padding: 0 10px;
+    border: none;
+    line-height: 40px;
+    font: bold 18px $primary-font;
+    color: #1d232c;
+    background: $button-background;
+    cursor: pointer;
+    @include transition(.1s all ease-in-out);
+    @include border-radius(5px);
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: $hightlighted-color;
+    }
+
+    &.ico {
+        position: relative;
+        padding-left: 50px;
+
+        > span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            overflow: hidden;
+            width: 40px;
+            padding-top: 4px;
+            border-right: 1px solid $page-background;
+            text-align: center;
+            line-height: 36px;
+        }
+    }
+}
 
 /* ==========================================================================
    Headlines
@@ -58,7 +101,11 @@ a {
 
 %headline {
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 14px;
+
+    small {
+        font-size: 13px;
+    }
 }
 
 h1 {
@@ -79,6 +126,7 @@ h2 {
 }
 
 .headline {
+    @extend %headline;
     padding: 15px 0;
 }
 
@@ -88,24 +136,6 @@ h2 {
 }
 
 /* ==========================================================================
-   Animations
-   ========================================================================== */
-
-// @include keyframes(bgcolor) {
-//     0% {
-//         color: #a1bde3;
-//     }
-
-//     50% {
-//         color: #fbc91e;
-//     }
-
-//     100% {
-//         color: #a1bde3;
-//     }
-// }
-
-/* ==========================================================================
    Header
    ========================================================================== */
 
@@ -113,7 +143,7 @@ h2 {
     @extend %separated-bottom;
     padding-top: 230px;
     min-height: 70px;
-    background: url("../images/header.png") 100% 50px no-repeat;
+    background: url("../images/logo.png") 100% 50px no-repeat;
 }
 
 .header-date {
@@ -125,6 +155,9 @@ h2 {
 }
 
 .header-title {
+    span {
+        @extend %highlighted;
+    }
 }
 
 /* Actions
@@ -166,8 +199,9 @@ h2 {
 
 .goodpoints-info {
     margin-top: -30px;
-    font-size: 36px;
     text-transform: none;
+    font-size: 36px;
+    font-weight: normal;
 }
 
 .goodpoints-points {
@@ -239,7 +273,6 @@ h2 {
 }
 
 .schedule {
-    margin-bottom: 60px;
     padding: 10px 0;
     min-height: 260px;
     border-right: 1px solid $page-background;
@@ -275,6 +308,10 @@ h2 {
     }
 }
 
+.is-schedule-decorated {
+    background: #343941 url("../images/tools.png") 100% 100% no-repeat;
+}
+
 // @include phone {
 //     .schedule {
 //         display: none;
@@ -288,10 +325,6 @@ h2 {
 /* ==========================================================================
    Repos
    ========================================================================== */
-
-.repos {
-    margin-bottom: 65px;
-}
 
 .repos-list {
     table-layout: fixed;
@@ -312,10 +345,6 @@ h2 {
 
         a {
             text-decoration: none;
-
-            &:hover, &:focus, &:active {
-                color: #fff;
-            }
         }
     }
 
@@ -323,21 +352,143 @@ h2 {
         text-align: right;
         font-size: 20px;
     }
-
-    .progress {
-        @extend %sandboxed;
-        float: right;
-        padding: 0 10px;
-        height: 32px;
-        line-height: 32px;
-        color: #fff;
-        background: #343941;
-    }
-
 }
 
-/* General layout rules
+.progress {
+    @extend %sandboxed;
+    float: right;
+    padding: 0 10px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    background: #343941;
+}
+
+/* ==========================================================================
+   Coffees
    ========================================================================== */
 
-/* General layout rules
+.list-coffee {
+    @include clearfix();
+}
+
+.coffee {
+    $coffee-size: 40px;
+
+    position: relative;
+    float: left;
+    width: $coffee-size;
+    height: $coffee-size;
+    line-height: $coffee-size;
+    font-size: $coffee-size;
+    margin: 0 15px 15px 0;
+
+    &:after {
+        content: 'coffee';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        clip: rect(0, $coffee-size, $coffee-size, 0);
+        text-align: center;
+
+        @include transition(1s clip ease-in-out);
+    }
+
+    &.new:after {
+        clip: rect($coffee-size, $coffee-size, $coffee-size, 0);
+    }
+}
+
+.list-counter {
+    text-align: right;
+
+    > dt {
+        line-height: 1;
+        font-size: 72px;
+        font-weight: bold;
+    }
+
+    > dd {
+        @extend %muted;
+        font-size: 18px;
+    }
+}
+
+/* ==========================================================================
+   Feeds
    ========================================================================== */
+
+/* Twitter
+   ========================================================================== */
+
+.feedItems {
+    margin-right: 50px;
+}
+
+.feedItem {
+    margin-bottom: 30px;
+}
+
+.feedItem-meta {
+    > a {
+        margin-right: 10px;
+    }
+
+    > span {
+        @extend %muted;
+    }
+}
+
+/* Instagram
+   ========================================================================== */
+
+.photoItems {
+    @include clearfix();
+    margin-bottom: 25px;
+
+    > li {
+        display: block;
+
+        > a {
+            float: left;
+            width: 140px;
+            height: 140px;
+            margin: 0 10px 10px 0;
+            background: #000;
+            @include transition(.2s background ease-in-out);
+
+            img {
+                display: block;
+                // max-width: 140px;
+                // max-height: 140px;
+                vertical-align: middle;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                background: $page-background;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Join us
+   ========================================================================== */
+
+.text-important {
+    line-height: 1.2;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.footer {
+    @extend %separated-top;
+    @extend %muted;
+    @extend .headline;
+    padding-top: 10px;
+    text-align: right;
+}
