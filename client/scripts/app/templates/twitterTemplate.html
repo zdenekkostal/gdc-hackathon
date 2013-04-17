@@ -2,22 +2,16 @@
     <h2 class="headline-section">Feed <small>of #goodhack tweets</small></h2>
 
     <div class="feedItems">
-        <div class="feedItem">
-            <p>Fantastic first day in Berlin at droidcon - more than 130 attendees for the hackaton compared to 40 last year. Today the barcamp ...</p>
-            <div class="feedItem-meta">
-                <a href="#">@akloboucnik</a>
-                <span>25 mins ago</span>
+        {{#each content}}
+            <div class="feedItem">
+                <p>{{tweet}}</p>
+                <div class="feedItem-meta">
+                    <a {{bindAttr href="userUrl"}}>{{user}}</a>
+                    <span>25 mins ago</span>
+                </div>
             </div>
-        </div>
-
-        <div class="feedItem">
-            <p>Grumpy cat found and terminated. I'll be back, guys and lads.</p>
-            <div class="feedItem-meta">
-                <a href="#">@jasanek</a>
-                <span>2 hours ago</span>
-            </div>
-        </div>
+        {{/each}}
     </div>
 
-    <button class="ico"><span class="ss-chat"></span> Twitter</button>
+    <button class="ico" href="https://twitter.com/search?q=%23gdhackathon&src=hash"><span class="ss-chat"></span> Twitter</button>
 </div>

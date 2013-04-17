@@ -13,7 +13,6 @@ var PhotosController = Ember.Controller.extend({
     },
 
     loadPhotos: function() {
-        var nextPage = this.nextPage,
             that = this,
             result = Ember.ArrayProxy.create({
                 content: [],
@@ -25,19 +24,15 @@ var PhotosController = Ember.Controller.extend({
             dataType: 'jsonp',
             context: this,
             success: function(data) {
-                var instaBurgers = data.data,
-                    maxIndex = instaBurgers.length - instaBurgers.length%3;
+                var instaPhotos = data.data;
 
-                instaBurgers.forEach(function(burger, index) {
-                    if (index >= maxIndex) return;
+                instaPhotos.forEach(function(photo, index) {
+                    if (index >= 12) return;
                     result.pushObject({
-                        lowRes: burger.images.low_resolution.url,
-                        desc: burger.caption && burger.caption.text,
-                        user: burger.user.username,
-                        instagramLink: burger.link
+                        lowRes: photo.images.low_resolution.url,
+                        instagramLink: photo.link
                     });
                 });
-                that.nextPage = data.pagination.next_url;
                 result.set('isLoaded', true);
             }
         });
