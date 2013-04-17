@@ -5,7 +5,7 @@
 
     {{#each content}}
         <tr>
-            <th><a href="#">{{url}}</a></th>
+            <th><a {{bindAttr href="url"}}>{{url}}</a></th>
             <td><div class="progress" style="width: 82%;">8.2</div></td>
         </tr>
     {{/each}}
@@ -13,7 +13,7 @@
         <th>
         {{view Ember.TextField class="full" valueBinding="repo" placeholder="Your repo here"}}
         </th>
-        <td><button {{action submitRepo repo}} type="submit">Submit repo</button></td>
+        <td><button {{action submitRepo repo branch}} type="submit">Submit repo</button></td>
     </tr>
     </table>
 
