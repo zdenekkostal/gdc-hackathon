@@ -42,24 +42,9 @@ a {
     }
 }
 
-.l-primary {
-    position: relative;
-
-    &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 5;
-        opacity: 0;
-        background: url("../design/design.png") 50% 0 no-repeat;
-    }
-}
-
 button {
     height: 40px;
+    margin-right: 10px;
     padding: 0 10px;
     border: none;
     line-height: 40px;
@@ -127,12 +112,13 @@ h2 {
 
 .headline {
     @extend %headline;
-    padding: 15px 0;
+    padding: 15px 0 25px;
 }
 
 .headline-section {
     @extend .headline;
     @extend %separated-top;
+
 }
 
 /* ==========================================================================
@@ -143,7 +129,7 @@ h2 {
     @extend %separated-bottom;
     padding-top: 230px;
     min-height: 70px;
-    background: url("../images/logo.png") 100% 50px no-repeat;
+    background: url("../images/logo.png") 100% 40px no-repeat;
 }
 
 .header-date {
@@ -155,6 +141,8 @@ h2 {
 }
 
 .header-title {
+    margin-top: 5px;
+
     span {
         @extend %highlighted;
     }
@@ -171,6 +159,7 @@ h2 {
     }
 
     > dd {
+        letter-spacing: 3px;
         font-size: 22px;
         color: #fff;
     }
@@ -206,9 +195,9 @@ h2 {
 
 .goodpoints-points {
     @extend %muted;
+    margin: 20px -2px -16px 0;
     line-height: 1;
-    text-align: right;
-    letter-spacing: 5px;
+    letter-spacing: -1px;
     font-size: 167px;
 
     @include transition(.2s color ease-in-out);
@@ -429,6 +418,7 @@ h2 {
 
 .feedItem {
     margin-bottom: 30px;
+    font-size: 14px;
 }
 
 .feedItem-meta {
@@ -480,9 +470,9 @@ h2 {
    ========================================================================== */
 
 .text-important {
+    padding-top: 10px;
     line-height: 1.2;
     font-size: 36px;
-    font-weight: bold;
 }
 
 .footer {
@@ -490,5 +480,6 @@ h2 {
     @extend %muted;
     @extend .headline;
     padding-top: 10px;
+    text-transform: none;
     text-align: right;
 }
