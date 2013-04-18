@@ -12,7 +12,7 @@ define(["ember"], function(Ember){
             var min = this.get('min');
             var max = this.get('max');
 
-            return (max - min) * progress;
+            return (max - min) * (progress);
         }.property('controllers.progressBar.progress'),
 
     });

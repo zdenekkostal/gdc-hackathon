@@ -5,13 +5,14 @@ define(["ember"], function(Ember){
 
         cssClass: function() {
             var start = this.get('content.start');
+            var nextActionStart = this.get('controllers.schedules.nextAction.start');
             var currentActionStart = this.get('controllers.schedules.currentAction.start');
             var nextAction = this.get('controllers.schedules.nextAction');
 
-            if (start < currentActionStart || !nextAction) {
-                return 'is-schedule-past';
-            } else if (start == currentActionStart) {
+            if (start == currentActionStart) {
                 return 'is-schedule-actual'
+            } else if (start < nextActionStart || !nextAction) {
+                return 'is-schedule-past';
             } else {
                 return '';
             }

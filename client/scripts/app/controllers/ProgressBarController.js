@@ -11,7 +11,7 @@ define(["ember"], function(Ember){
             if (currentTime < start) {
                 return 0;
             } else if (currentTime > end) {
-                return 100;
+                return 1;
             } else {
                 return (currentTime - start) / (end - start);
             }

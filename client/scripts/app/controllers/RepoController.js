@@ -14,7 +14,6 @@ define(["ember"], function(Ember) {
         findAll: function() {
             Ember.$.get('/repo', function(data) {
                 data.forEach(function(repo) {
-                    console.log(repo.url);
                     repo.name = repo.url.replace('https://github.com/', '');
                     repo.name = repo.name.replace('/tree', '');
                 });

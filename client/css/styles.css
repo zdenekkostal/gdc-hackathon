@@ -23,7 +23,7 @@ html, body {
   min-height: 100%; }
 
 body {
-  font: 300 13px/1.5384 "Frutiger LT Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  font: 300 13px/1.5384 "FrutigerLTW01-45Light", "Frutiger LT Prod", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 h1, h2, h3, h4 {
   line-height: normal; }
@@ -328,7 +328,7 @@ input, button {
   padding: 0 10px;
   border: none;
   line-height: 40px;
-  font: bold 18px "Frutiger LT Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font: bold 18px "FrutigerLTW01-67BoldCn", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   -webkit-transition: 0.1s all ease-in-out;
   -moz-transition: 0.1s all ease-in-out;
   -o-transition: 0.1s all ease-in-out;
@@ -419,7 +419,8 @@ h2 {
   top: 20px; }
 
 .header-title {
-  margin-top: 5px; }
+  margin-top: 5px;
+  font-family: "FrutigerLTW01-67BoldCn", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 /* Actions
    ========================================================================== */
@@ -454,6 +455,7 @@ h2 {
   text-align: right;
   letter-spacing: -1px;
   font-size: 167px;
+  font-family: "FrutigerLTW01-67BoldCn", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   -webkit-transition: 0.2s color ease-in-out;
   -moz-transition: 0.2s color ease-in-out;
   -o-transition: 0.2s color ease-in-out;
@@ -598,7 +600,8 @@ h2 {
   margin-bottom: 25px;
   border-spacing: 0;
   border-top: 1px solid #343941;
-  line-height: 1; }
+  line-height: 1;
+  font-family: "FrutigerLTW01-67BoldCn", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
   .repos-list th, .repos-list td {
     padding: 24px 0 13px;
     border-bottom: 1px solid #333941; }
@@ -672,7 +675,8 @@ h2 {
   .list-counter > dt {
     line-height: 1;
     font-size: 72px;
-    font-weight: bold; }
+    font-weight: bold;
+    font-family: "FrutigerLTW01-67BoldCn", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
   .list-counter > dd {
     font-size: 18px; }
 

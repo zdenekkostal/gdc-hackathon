@@ -48,7 +48,7 @@ a {
     padding: 0 10px;
     border: none;
     line-height: 40px;
-    font: bold 18px $primary-font;
+    font: bold 18px $primary-font-bold;
 
     @include transition(.1s all ease-in-out);
     @include border-radius(5px);
@@ -175,6 +175,7 @@ h2 {
 
 .header-title {
     margin-top: 5px;
+    font-family: $primary-font-bold;
 
     span {
         @extend %highlighted;
@@ -233,6 +234,7 @@ h2 {
     text-align: right;
     letter-spacing: -1px;
     font-size: 167px;
+    font-family: $primary-font-bold;
 
     @include transition(.2s color ease-in-out);
 
@@ -357,6 +359,7 @@ h2 {
     border-spacing: 0;
     border-top: 1px solid #343941;
     line-height: 1;
+    font-family: $primary-font-bold;
 
     th, td {
         padding: 24px 0 13px;
@@ -442,6 +445,7 @@ h2 {
         line-height: 1;
         font-size: 72px;
         font-weight: bold;
+        font-family: $primary-font-bold;
     }
 
     > dd {
