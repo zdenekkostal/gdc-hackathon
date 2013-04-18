@@ -455,6 +455,19 @@ h2 {
 .feedItem {
     margin-bottom: 30px;
     font-size: 14px;
+
+    > p {
+        a {
+            text-decoration: none;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $important-color;
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 .feedItem-meta {

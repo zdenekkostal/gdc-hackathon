@@ -675,6 +675,11 @@ h2 {
 .feedItem {
   margin-bottom: 30px;
   font-size: 14px; }
+  .feedItem > p a {
+    text-decoration: none; }
+    .feedItem > p a:hover, .feedItem > p a:focus, .feedItem > p a:active {
+      color: #fbc91e;
+      text-decoration: underline; }
 
 .feedItem-meta > a {
   margin-right: 10px; }
