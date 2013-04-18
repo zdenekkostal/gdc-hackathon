@@ -14,6 +14,11 @@ define(["ember"], function(Ember){
             },
 
             {
+                start: new Date(2013, 3, 18, 10, 0),
+                title: 'Hackathon All-Hands'
+            },
+
+            {
                 start: new Date(2013, 3, 18, 12, 0),
                 title: 'Free Lunch'
             },
@@ -26,11 +31,6 @@ define(["ember"], function(Ember){
             {
                 start: new Date(2013, 3, 18, 19, 0),
                 title: 'Dinner time (OOO)'
-            },
-
-            {
-                start: new Date(2013, 3, 18, 21, 0),
-                title: 'Hunting Grumpy cat'
             },
 
             {
