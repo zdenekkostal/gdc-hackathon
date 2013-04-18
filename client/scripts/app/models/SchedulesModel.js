@@ -15,17 +15,17 @@ define(["ember"], function(Ember){
 
             {
                 start: new Date(2013, 3, 18, 12, 0),
-                title: 'Lunch'
+                title: 'Free Lunch'
             },
 
             {
                 start: new Date(2013, 3, 18, 16, 0),
-                title: 'NERF Battle'
+                title: 'Free Snacks'
             },
 
             {
-                start: new Date(2013, 3, 18, 18, 0),
-                title: 'Dinner'
+                start: new Date(2013, 3, 18, 19, 0),
+                title: 'Dinner time (OOO)'
             },
 
             {
@@ -44,7 +44,7 @@ define(["ember"], function(Ember){
             },
 
             {
-                start: new Date(2013, 3, 19, 4, 0),
+                start: new Date(2013, 3, 19, 3, 0),
                 title: 'GoodNap'
             }
         ]
@@ -66,12 +66,18 @@ define(["ember"], function(Ember){
 
             {
                 start: new Date(2013, 3, 19, 12),
-                title: 'Lunch'
+                title: 'Free lunch'
             },
+
 
             {
                 start: new Date(2013, 3, 19, 14),
                 title: 'NERF Battle: Revenge'
+            },
+
+            {
+                start: new Date(2013, 3, 19, 16),
+                title: 'Free snacks'
             },
 
             {
