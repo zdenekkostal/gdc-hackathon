@@ -31,7 +31,7 @@ define(["ember"], function(Ember){
                     textWords = textWords.map(function(word) {
                         if (word.substring(0,1) === '#') {
                             return '<a href="https://twitter.com/search?q=%23'+word.substring(1, word.length)+'&src=hash">'+word+'</a>';
-                        } else if (word.substring(0,7) === 'http://') {
+                        } else if (word.substring(0,7) === 'http://' || word.substring(0,8) === 'https://') {
                             return '<a href="'+word+'">'+word+'</a>';
                         }
                         return word;
