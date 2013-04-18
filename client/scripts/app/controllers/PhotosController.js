@@ -3,7 +3,7 @@ var INSTAGRAM_ID = '899426d0f7f445ff9f744fff5260e134';
 
 var PhotosController = Ember.Controller.extend({
 
-    nextPage: 'https://api.instagram.com/v1/tags/hamburger/media/recent?client_id='+INSTAGRAM_ID,
+    nextPage: 'https://api.instagram.com/v1/tags/gdhackathon/media/recent?client_id='+INSTAGRAM_ID,
 
     content: [],
 
