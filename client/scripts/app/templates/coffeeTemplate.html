@@ -13,7 +13,9 @@
         {{/each}}
 
         <!--<span class="ss-icon coffee new"></span>-->
-        <button {{action submitCoffee}} type="submit" class="ico"><span class="ss-plus"></span> Add a shot</button>
+        {{#if showSubmit}}
+            <button {{action submitCoffee}} type="submit" class="ico"><span class="ss-plus"></span> Add a shot</button>
+        {{/if}}
     </div>
 
     <dl class="list-counter l-col-4">

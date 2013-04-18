@@ -1,6 +1,12 @@
 define(["ember"], function(Ember) {
     var RepoController = Ember.ArrayController.extend({
+        needs: ['application'],
         content: [],
+
+        showSubmit: function() {
+            return !this.get('controllers.application.viewOnly');
+        }.property('controllers.application.viewOnly'),
+
         init: function() {
             this._super();
             this.findAll();

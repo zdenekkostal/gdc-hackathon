@@ -22,6 +22,20 @@ define(["ember"], function(Ember){
         return rest < 10 ? '0' + rest : rest;
     });
 
-	var ApplicationController = Ember.Controller.extend();
+	var ApplicationController = Ember.Controller.extend({
+
+        viewOnly: true,
+
+        init: function() {
+            this._super();
+            if (document.location.href === 'http://hackathon.gooddata.com/') {
+                this.set('viewOnly', true);
+            } else {
+                this.set('viewOnly', false);
+            }
+        }
+
+
+    });
 	return ApplicationController;
 });

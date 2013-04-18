@@ -8,12 +8,14 @@
             <th colspan="2"><a {{bindAttr href="url"}}>{{name}}</a></th>
         </tr>
     {{/each}}
-    <tr class="editable">
-        <th class="l-col-8">
-        {{view Ember.TextField valueBinding="repo" classBinding=":full isRepoUrlValid::is-error" placeholder="Your repo here"}}
-        </th>
-        <td class="l-col-4"><button {{action submitRepo repo branch}} type="submit" {{bindAttr disabled="isSubmitDisabled"}}>Submit repo</button></td>
-    </tr>
+    {{#if showSubmit}}
+        <tr class="editable">
+            <th class="l-col-8">
+            {{view Ember.TextField valueBinding="repo" classBinding=":full isRepoUrlValid::is-error" placeholder="Your repo here"}}
+            </th>
+            <td class="l-col-4"><button {{action submitRepo repo branch}} type="submit" {{bindAttr disabled="isSubmitDisabled"}}>Submit repo</button></td>
+        </tr>
+    {{/if}}
     </table>
 
     <!--button class="ico"><span class="ss-plus"></span> Add repo/branch</button-->

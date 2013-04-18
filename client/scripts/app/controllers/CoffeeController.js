@@ -1,5 +1,10 @@
 define(["ember"], function(Ember){
 	var CoffeeController = Ember.Controller.extend({
+        needs: ['application'],
+
+        showSubmit: function() {
+            return !this.get('controllers.application.viewOnly');
+        }.property('controllers.application.viewOnly'),
 
         coffeeQuery: '/coffee',
 
