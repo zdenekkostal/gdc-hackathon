@@ -27,8 +27,19 @@ define(["ember"], function(Ember){
 
                 tweets.forEach(function(tweet, index) {
                     if (index >= 4) return;
+                    var textWords = tweet.text.split(' ');
+                    textWords = textWords.map(function(word) {
+                        if (word.substring(0,1) === '#') {
+                            return '<a href="https://twitter.com/search?q=%23'+word.substring(1, word.length)+'&src=hash">'+word+'</a>';
+                        } else if (word.substring(0,7) === 'http://') {
+                            return '<a href="'+word+'">'+word+'</a>';
+                        }
+                        return word;
+                    });
+                    var textMarkup = textWords.join(' ');
+
                     result.pushObject({
-                        tweet: tweet.text,
+                        tweet: textMarkup,
                         user: tweet.from_user,
                         userUrl: 'https://twitter.com/'+tweet.from_user,
                         createdAtAgo: $.timeago(tweet.created_at)
