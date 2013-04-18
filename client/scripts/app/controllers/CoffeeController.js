@@ -41,7 +41,7 @@ define(["ember"], function(Ember){
         },
 
         submitCoffee: function() {
-            Ember.$.post("http://localhost:8844/coffee", {}).done(function(coffee) {
+            Ember.$.post("/coffee", {}).done(function(coffee) {
                 this.get('content.coffees').pushObject(Ember.Object.create({ isNew: true }));
                 this.get('content').set('mg', this.get('content.mg') + coffee.mg);
             }.bind(this));
