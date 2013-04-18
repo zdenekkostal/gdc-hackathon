@@ -28,11 +28,7 @@ define(["ember"], function(Ember){
                     result.set('mg', data.reduce(function(rollingValue, coffee) {
                         return rollingValue + coffee.mg;
                     }, 0));
-
-                    data.forEach(function(coffee) {
-                        result.get('coffees').pushObject(Ember.Object.create({ isNew: false }));
-                    }, this);
-
+                    result.set('coffees', data.length);
                     result.set('isLoaded', true);
                 }
             });
@@ -42,7 +38,6 @@ define(["ember"], function(Ember){
 
         submitCoffee: function() {
             Ember.$.post("/coffee", {}).done(function(coffee) {
-                this.get('content.coffees').pushObject(Ember.Object.create({ isNew: true }));
                 this.get('content').set('mg', this.get('content.mg') + coffee.mg);
             }.bind(this));
 
