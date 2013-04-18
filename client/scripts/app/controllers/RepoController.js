@@ -6,7 +6,7 @@ define(["ember"], function(Ember) {
             this.findAll();
         },
         findAll: function() {
-            Ember.$.get('http://localhost:8844/repo', function(data) {
+            Ember.$.get('/repo', function(data) {
                 data.forEach(function(repo) {
                     repo.name = repo.url.replace('https://github.com/', '');
                     repo.name = repo.name.replace('/tree', '');
@@ -18,7 +18,7 @@ define(["ember"], function(Ember) {
 
         submitRepo: function(repo) {
             var repoPayload = { "url": repo };
-            Ember.$.post("http://localhost:8844/repo", repoPayload).done(function() {
+            Ember.$.post("/repo", repoPayload).done(function() {
                 this.get('content').pushObject(repoPayload);
             }.bind(this));
         }
