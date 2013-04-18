@@ -45,7 +45,7 @@ a {
 
 %form-item {
     height: 40px;
-    padding: 0 10px;
+    padding: 0 15px;
     border: none;
     line-height: 40px;
     font: bold 18px $primary-font-bold;
@@ -78,6 +78,7 @@ input {
 button {
     @extend %form-item;
     margin-right: 10px;
+    letter-spacing: -1px;
     color: #1d232c;
     background: $button-background;
     cursor: pointer;
@@ -96,7 +97,7 @@ button {
 
     &.ico {
         position: relative;
-        padding-left: 50px;
+        padding-left: 52px;
 
         > span {
             position: absolute;
@@ -193,8 +194,8 @@ h2 {
     }
 
     > dd {
-        letter-spacing: 3px;
         font-size: 22px;
+        font-family: $primary-font-bold;
         color: #fff;
     }
 }
@@ -222,6 +223,7 @@ h2 {
 
 .goodpoints-info {
     margin-top: -30px;
+    line-height: 1.3;
     text-transform: none;
     font-size: 36px;
     font-weight: normal;
@@ -289,9 +291,10 @@ h2 {
    ========================================================================== */
 
 .schedule-headline {
-    padding: 15px 25px;
+    padding: 15px 17px;
     text-transform: none;
-    font-size: 24px;
+    font-size: 22px;
+    font-family: $primary-font-bold;
 
     small {
         font-size: 16px;
@@ -299,7 +302,7 @@ h2 {
 }
 
 .schedule {
-    padding: 10px 0;
+    padding-top: 10px;
     min-height: 260px;
     border-right: 1px solid $page-background;
     font-size: 16px;
@@ -317,7 +320,7 @@ h2 {
     }
 
     th, td {
-        padding: 2px 20px 2px 25px;
+        padding: 2px 20px 2px 17px;
     }
 
     th {
@@ -338,16 +341,6 @@ h2 {
     background: #343941 url("../images/tools.png") 100% 100% no-repeat;
 }
 
-// @include phone {
-//     .schedule {
-//         display: none;
-//     }
-
-//     .is-schedule-today {
-//         display: block;
-//     }
-// }
-
 /* ==========================================================================
    Repos
    ========================================================================== */
@@ -355,7 +348,7 @@ h2 {
 .repos-list {
     table-layout: fixed;
     width: 100%;
-    margin-bottom: 25px;
+    margin: -15px 0 25px;
     border-spacing: 0;
     border-top: 1px solid #343941;
     line-height: 1;
@@ -533,7 +526,7 @@ h2 {
 
 .text-important {
     padding-top: 10px;
-    line-height: 1.2;
+    line-height: 1.3;
     font-size: 36px;
 }
 
