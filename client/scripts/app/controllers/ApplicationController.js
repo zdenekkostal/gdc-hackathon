@@ -28,7 +28,7 @@ define(["ember"], function(Ember){
 
         init: function() {
             this._super();
-            if (document.location.href === 'http://hackathon.gooddata.com/') {
+            if (document.location.href.search('http://hackathon.gooddata.com') > -1) {
                 this.set('viewOnly', true);
             } else {
                 this.set('viewOnly', false);
