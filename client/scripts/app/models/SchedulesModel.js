@@ -81,11 +81,6 @@ define(["ember"], function(Ember){
             },
 
             {
-                start: new Date(2013, 3, 19, 16),
-                title: 'Show, tell & eat'
-            },
-
-            {
                 start: new Date(2013, 3, 19, 18),
                 title: 'Beer time'
             }
