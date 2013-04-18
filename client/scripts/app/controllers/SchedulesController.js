@@ -25,23 +25,37 @@ define(["ember", "models/SchedulesModel"], function(Ember, schedulesModel){
             return allActions.objectAt(allActions.length - 1);
         }.property('allActions'),
 
-        currentAction: function() {
+        previousAction: function() {
             var allActions = this.get('allActions');
             var currentTime = this.get('controllers.time.currentTime');
-            var lastAction;
+            var previousAction;
 
             for (var i = 0; i < allActions.length; i++) {
                 var action = allActions[i];
 
                 if (currentTime < action.start.getTime()) {
-                    return lastAction;
+                    return previousAction;
                 }
 
-                lastAction = action;
+                previousAction = action;
             }
 
             return undefined;
+        }.property('controllers.time.currentTime'),
 
+        currentAction: function() {
+            var allActions = this.get('allActions');
+            var currentTime = this.get('controllers.time.currentTime');
+
+            for (var i = 0; i < allActions.length; i++) {
+                var action = allActions[i];
+
+                if (currentTime > action.start.getTime() && currentTime < action.start.getTime() + (30 * 60 * 1000)) {
+                    return action;
+                }
+            }
+
+            return undefined;
         }.property('controllers.time.currentTime'),
 
         nextAction: function() {

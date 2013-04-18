@@ -4,11 +4,7 @@ define([
 ], function(Ember, goodPointsTemplate) {
 
     var GoodPointsView = Ember.View.extend({
-        defaultTemplate: Ember.Handlebars.compile(goodPointsTemplate),
-
-        goodPoints: function() {
-            return 23.5;
-        }.property()
+        defaultTemplate: Ember.Handlebars.compile(goodPointsTemplate)
     });
     return GoodPointsView;
 });

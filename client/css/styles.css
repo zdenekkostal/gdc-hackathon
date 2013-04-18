@@ -291,7 +291,8 @@ th[class^="l-col"] {
 
   .is-hidden-print {
     display: none !important; } }
-h2 small, .header-date, .action-now > dt, .action-next > dt, .goodpoints-points, .list-counter > dd, .feedItem-meta > span, .footer {
+h2 small, .header-date, .action-now > dt, .action-prev > dt,
+.action-next > dt, .goodpoints-points, .list-counter > dd, .feedItem-meta > span, .footer {
   color: #494d55; }
 
 a, .header-title span, .goodpoints-points > strong {
@@ -382,10 +383,12 @@ button {
 /* ==========================================================================
    Headlines
    ========================================================================== */
-h2, .headline, .headline-section, .footer, .header-date, .action-now > dt, .action-next > dt {
+h2, .headline, .headline-section, .footer, .header-date, .action-now > dt, .action-prev > dt,
+.action-next > dt {
   text-transform: uppercase;
   font-size: 14px; }
-  h2 small, .headline small, .headline-section small, .footer small, .header-date small, .action-now > dt small, .action-next > dt small {
+  h2 small, .headline small, .headline-section small, .footer small, .header-date small, .action-now > dt small, .action-prev > dt small,
+  .action-next > dt small {
     font-size: 13px; }
 
 h1 {
@@ -420,9 +423,11 @@ h2 {
 
 /* Actions
    ========================================================================== */
-.action-now > dt, .action-next > dt {
+.action-now > dt, .action-prev > dt,
+.action-next > dt {
   margin-bottom: 5px; }
-.action-now > dd, .action-next > dd {
+.action-now > dd, .action-prev > dd,
+.action-next > dd {
   letter-spacing: 3px;
   font-size: 22px;
   color: #fff; }
