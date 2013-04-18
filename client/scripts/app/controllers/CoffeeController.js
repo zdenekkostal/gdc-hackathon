@@ -16,6 +16,8 @@ define(["ember"], function(Ember){
             var that = this,
                 result = Ember.Object.create({
                     mg: 0,
+                    coffees50: [],
+                    coffees10: [],
                     coffees: [],
                     isLoaded: false
                 });
@@ -29,8 +31,24 @@ define(["ember"], function(Ember){
                         return rollingValue + coffee.mg;
                     }, 0));
 
+                    var coffees10 = 0;
+                    var coffees50 = 0;
                     data.forEach(function(coffee) {
                         result.get('coffees').pushObject(Ember.Object.create({ isNew: false }));
+
+                        coffees10++;
+                        if (coffees10 === 10) {
+                            coffees10 = 0;
+                            coffees50++;
+                            result.set('coffees', []);
+                            result.get('coffees10').pushObject(Ember.Object.create({ isNew: false }));
+                        }
+
+                        if (coffees50 === 5) {
+                            coffees50 = 0;
+                            result.set('coffees10', []);
+                            result.get('coffees50').pushObject(Ember.Object.create({ isNew: false }));
+                        }
                     }, this);
 
                     result.set('isLoaded', true);

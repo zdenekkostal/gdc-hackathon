@@ -424,6 +424,15 @@ h2 {
     &.new:after {
         clip: rect($coffee-size, $coffee-size, $coffee-size, 0);
     }
+
+    .num {
+        color: black;
+        font-size: 15px;
+        position: absolute;
+        z-index: 100;
+        padding-top: 2px;
+        padding-left: 7px;
+    }
 }
 
 .list-counter {

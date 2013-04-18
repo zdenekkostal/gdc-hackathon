@@ -654,6 +654,13 @@ h2 {
     transition: 1s clip ease-in-out; }
   .coffee.new:after {
     clip: rect(40px, 40px, 40px, 0); }
+  .coffee .num {
+    color: black;
+    font-size: 15px;
+    position: absolute;
+    z-index: 100;
+    padding-top: 2px;
+    padding-left: 7px; }
 
 .list-counter {
   text-align: right; }
