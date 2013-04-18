@@ -386,15 +386,16 @@ h2 {
 }
 
 .coffee {
-    $coffee-size: 40px;
+    $coffee-size: 300px;
+    //left: 300px;
 
     position: relative;
-    float: left;
     width: $coffee-size;
     height: $coffee-size;
     line-height: $coffee-size;
     font-size: $coffee-size;
-    margin: 0 15px 15px 0;
+    //margin: 0 15px 15px 0;
+    margin: 0 auto;
 
     &:after {
         content: 'coffee';

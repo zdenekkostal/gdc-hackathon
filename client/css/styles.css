@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ==========================================================================
    Variables for theme definition
    ========================================================================== */
@@ -622,12 +623,11 @@ h2 {
 
 .coffee {
   position: relative;
-  float: left;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 40px;
-  margin: 0 15px 15px 0; }
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+  font-size: 300px;
+  margin: 0 auto; }
   .coffee:after {
     content: 'coffee';
     position: absolute;
@@ -635,14 +635,14 @@ h2 {
     top: 0;
     right: 0;
     bottom: 0;
-    clip: rect(0, 40px, 40px, 0);
+    clip: rect(0, 300px, 300px, 0);
     text-align: center;
     -webkit-transition: 1s clip ease-in-out;
     -moz-transition: 1s clip ease-in-out;
     -o-transition: 1s clip ease-in-out;
     transition: 1s clip ease-in-out; }
   .coffee.new:after {
-    clip: rect(40px, 40px, 40px, 0); }
+    clip: rect(300px, 300px, 300px, 0); }
 
 .list-counter {
   text-align: right; }
