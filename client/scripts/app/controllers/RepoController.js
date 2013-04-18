@@ -9,6 +9,7 @@ define(["ember"], function(Ember) {
             Ember.$.get('http://localhost:8844/repo', function(data) {
                 data.forEach(function(repo) {
                     repo.name = repo.url.replace('https://github.com/', '');
+                    repo.name = repo.name.replace('/tree', '');
                 });
 
                 this.set('content', data);
