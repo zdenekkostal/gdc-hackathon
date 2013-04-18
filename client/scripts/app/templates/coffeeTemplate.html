@@ -2,18 +2,16 @@
     <h2 class="headline-section">Coffee</h2>
 
     <div class="list-coffee l-col-8">
-        <span class="ss-icon coffee"></span>
-        <span class="ss-icon coffee"></span>
-        <span class="ss-icon coffee"></span>
-        <span class="ss-icon coffee"></span>
-        <span class="ss-icon coffee"></span>
-        <span class="ss-icon coffee"></span>
-        <span class="ss-icon coffee new"></span>
-        <button class="ico"><span class="ss-plus"></span> Add a shot</button>
+        {{#each content.coffees}}
+        <span {{bindAttr class="isNew:new :ss-icon :coffee"}}></span>
+        {{/each}}
+
+        <!--<span class="ss-icon coffee new"></span>-->
+        <button {{action submitCoffee}} type="submit" class="ico"><span class="ss-plus"></span> Add a shot</button>
     </div>
 
     <dl class="list-counter l-col-4">
-        <dt>123</dt>
+        <dt>{{content.mg}}</dt>
         <dd>GoodCaffeine mg</dd>
     </dl>
 

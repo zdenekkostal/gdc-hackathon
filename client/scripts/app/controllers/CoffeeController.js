@@ -1,4 +1,52 @@
 define(["ember"], function(Ember){
-	var CoffeeController = Ember.Controller.extend();
+	var CoffeeController = Ember.Controller.extend({
+
+        coffeeQuery: '/coffee',
+
+        content: [],
+        lastContent: [],
+
+        init: function() {
+            this._super();
+
+            this.set('content', this.loadCoffees());
+        },
+
+        loadCoffees: function() {
+            var that = this,
+                result = Ember.Object.create({
+                    mg: 0,
+                    coffees: [],
+                    isLoaded: false
+                });
+
+            Ember.$.ajax({
+                url: this.coffeeQuery,
+                dataType: 'json',
+                context: this,
+                success: function(data) {
+                    result.set('mg', data.reduce(function(rollingValue, coffee) {
+                        return rollingValue + coffee.mg;
+                    }, 0));
+
+                    data.forEach(function(coffee) {
+                        result.get('coffees').pushObject(Ember.Object.create({ isNew: false }));
+                    }, this);
+
+                    result.set('isLoaded', true);
+                }
+            });
+
+            return result;
+        },
+
+        submitCoffee: function() {
+            Ember.$.post("http://localhost:8844/coffee", {}).done(function() {
+                this.get('content.coffees').pushObject(Ember.Object.create({ isNew: true }))
+            }.bind(this));
+        }
+
+    });
+
 	return CoffeeController;
 });
