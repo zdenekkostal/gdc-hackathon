@@ -45,6 +45,12 @@ define(["ember"], function(Ember){
                 this.get('content.coffees').pushObject(Ember.Object.create({ isNew: true }));
                 this.get('content').set('mg', this.get('content.mg') + coffee.mg);
             }.bind(this));
+
+            Ember.run.later(this, function() {
+                this.get('content.coffees').forEach(function(coffee) {
+                    coffee.set('isNew', false);
+                });
+            }, 500);
         }
 
     });
