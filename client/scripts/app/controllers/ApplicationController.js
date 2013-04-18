@@ -34,8 +34,6 @@ define(["ember"], function(Ember){
                 this.set('viewOnly', false);
             }
         }
-
-
     });
 	return ApplicationController;
 });

@@ -1,72 +1,62 @@
+<div class="l-primary">
+    <div class="header l-container">
+        <small class="header-date">April 18-20, 2013</small>
 
-<!DOCTYPE html>
-<!--[if lt IE 9 ]><html lang="cs" class="ie ie8"> <![endif]-->
-<!--[if lt IE 10 ]><html lang="cs" class="ie ie9"> <![endif]-->
-<!--[if (gt IE 10)|!(IE)]><!--><html lang="cs"> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-    <meta name="author" content="GoodPeople">
-    <meta name="copyright" content="Copyright © 2008 - 2013 GoodData Corporation. All rights reserved.">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>GoodHack</title>
-
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="fonts/ss-pika.css" media="screen">
-
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-    <script data-main="./scripts/main" src="./scripts/libs/requirejs/2.1.2/require.js"></script>
-</head>
-<body>
-        <div class="l-primary">
-            <div class="header l-container">
-                <small class="header-date">April 18-20, 2013</small>
-
-                <div class="header-title l-col-4">
-                    <h1>Good<span>Hack</span></h1>
-                </div>
-
-                {{render actions}}
-            </div>
-
-            {{render goodPoints}}
-
-            {{render progressBar}}
-
-            {{render schedules}}
-
-            <div class="l-separated l-container">
-
-                {{render twitter}}
-
-                {{render photos}}
-
-            </div>
-
-            {{render repo}}
-
-            {{render coffee}}
-
-            <div class="l-separated l-container">
-                <h2 class="headline-section">Join us</h2>
-
-                <div class="text-important l-col-8 l-offset-4">
-                    Fancy joining us next time?<br>
-                    Get <a href="#">goodjob@gooddata.com</a>
-                </div>
-            </div>
-
-            <div class="footer l-separated">
-                <p>Icons by Jeremy Bristol and Juan Pablo Bravo,<br>
-                from The Noun Project.</p>
-            </div>
-
+        <div class="header-title l-col-4">
+            <h1>Good<span>Hack</span></h1>
         </div>
 
-        <script src="lib/ss-standard/ss-standard.js"></script>
-</body>
-</html>
+        {{render actions}}
+    </div>
+
+    {{render goodPoints}}
+
+    {{render progressBar}}
+
+    {{render schedules}}
+
+    <div class="l-separated l-container">
+
+        {{render twitter}}
+
+        {{render photos}}
+
+    </div>
+
+    {{render repo}}
+
+    {{render coffee}}
+
+    <div class="l-separated l-container">
+        <h2 class="headline-section">Join us</h2>
+
+        <div class="text-important l-col-8 l-offset-4">
+            Fancy joining us next time?<br>
+            Get <a href="#">goodjob@gooddata.com</a>
+        </div>
+    </div>
+
+    <div class="footer l-separated">
+        <p>Icons by Jeremy Bristol and Juan Pablo Bravo,<br>
+        from The Noun Project.</p>
+    </div>
+
+</div>
+
+<script src="lib/ss-standard/ss-standard.js"></script>
+
+{{#if viewOnly}}
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-40231592-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+{{/if}}
