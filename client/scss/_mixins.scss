@@ -3,7 +3,7 @@
    ========================================================================== */
 
 %sandboxed {
-    box-layout: border-box;
+    box-sizing: border-box;
 }
 
 @mixin desktop {

@@ -4,8 +4,8 @@
 /* ==========================================================================
    Mixins
    ========================================================================== */
-.l-col-2, .l-col-3, .l-col-4, .l-col-5, .l-col-6, .l-col-7, .l-col-8, .l-col-9, .l-col-10, .l-col-11, .l-col-12, input.full, .progress {
-  box-layout: border-box; }
+.l-col-2, .l-col-3, .l-col-4, .l-col-5, .l-col-6, .l-col-7, .l-col-8, .l-col-9, .l-col-10, .l-col-11, .l-col-12, input, input.full, .progress {
+  box-sizing: border-box; }
 
 /* Vendor prefixes & aggregated properties
    ========================================================================== */
@@ -341,10 +341,15 @@ input, button {
    Forms
    ========================================================================== */
 input {
+  outline: none;
   color: #fff;
   background: #343941; }
   input.full {
     width: 100%; }
+  input.is-error {
+    -webkit-box-shadow: inset 0 0 5px red;
+    -moz-box-shadow: inset 0 0 5px red;
+    box-shadow: inset 0 0 5px red; }
 
 button {
   margin-right: 10px;
@@ -353,6 +358,12 @@ button {
   cursor: pointer; }
   button:hover, button:focus, button:active {
     background: #a1bde3; }
+  button[disabled] {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    background: #fbc91e !important;
+    cursor: default; }
   button.ico {
     position: relative;
     padding-left: 50px; }
