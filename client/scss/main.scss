@@ -387,20 +387,19 @@ h2 {
 
 .coffee {
     $coffee-size: 300px;
-    //left: 300px;
 
     position: relative;
     width: $coffee-size;
     height: $coffee-size;
     line-height: $coffee-size;
     font-size: $coffee-size;
-    //margin: 0 15px 15px 0;
     margin: 0 auto;
+    padding-left: 60px;
 
     &:after {
         content: 'coffee';
         position: absolute;
-        left: 0;
+        left: 60px;
         top: 0;
         right: 0;
         bottom: 0;
@@ -416,6 +415,9 @@ h2 {
 }
 
 .list-counter {
+    position: absolute;
+    right: 0;
+    top: 180px;
     text-align: right;
 
     > dt {

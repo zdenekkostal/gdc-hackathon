@@ -19,6 +19,11 @@
     margin-bottom: 65px;
 }
 
+.l-centered {
+    margin: 0 auto;
+    text-align: center;
+}
+
 @for $i from 2 through 12 {
     .l-col-#{$i} {
         @extend %sandboxed;
