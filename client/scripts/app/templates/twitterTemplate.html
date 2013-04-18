@@ -1,5 +1,5 @@
 <div class="feed l-col-4">
-    <h2 class="headline-section">Feed <small>of #goodhack tweets</small></h2>
+    <h2 class="headline-section">Feed <small>of #gdhackathon tweets</small></h2>
 
     <div class="feedItems">
         {{#each content}}
@@ -7,11 +7,12 @@
                 <p>{{tweet}}</p>
                 <div class="feedItem-meta">
                     <a {{bindAttr href="userUrl"}}>{{user}}</a>
-                    <span>25 mins ago</span>
+                    <!--<span>25 mins ago</span>-->
+                    <span>{{createdAtAgo}}</span>
                 </div>
             </div>
         {{/each}}
     </div>
 
-    <button class="ico" href="https://twitter.com/search?q=%23gdhackathon&src=hash"><span class="ss-chat"></span> Twitter</button>
+    <button class="ico" onclick="window.open('https://twitter.com/search?q=%23gdhackathon&src=hash');"><span class="ss-chat"></span> Twitter</button>
 </div>

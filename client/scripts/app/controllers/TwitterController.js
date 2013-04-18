@@ -30,7 +30,8 @@ define(["ember"], function(Ember){
                     result.pushObject({
                         tweet: tweet.text,
                         user: tweet.from_user,
-                        userUrl: 'https://twitter.com/'+tweet.from_user
+                        userUrl: 'https://twitter.com/'+tweet.from_user,
+                        createdAtAgo: $.timeago(tweet.created_at)
                     });
                 });
                 result.set('isLoaded', true);
