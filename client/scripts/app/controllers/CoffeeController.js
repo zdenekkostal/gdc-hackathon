@@ -21,8 +21,8 @@ define(["ember"], function(Ember){
             var that = this,
                 result = Ember.Object.create({
                     mg: 0,
-                    coffees50: [],
-                    coffees10: [],
+                    coffees20: [],
+                    coffees5: [],
                     coffees: [],
                     isLoaded: false
                 });
@@ -36,23 +36,23 @@ define(["ember"], function(Ember){
                         return rollingValue + coffee.mg;
                     }, 0));
 
-                    var coffees10 = 0;
-                    var coffees50 = 0;
+                    var coffees5 = 0;
+                    var coffees20 = 0;
                     data.forEach(function(coffee) {
                         result.get('coffees').pushObject(Ember.Object.create({ isNew: false }));
 
-                        coffees10++;
-                        if (coffees10 === 10) {
-                            coffees10 = 0;
-                            coffees50++;
-                            result.set('coffees', []);
-                            result.get('coffees10').pushObject(Ember.Object.create({ isNew: false }));
+                        coffees5++;
+                        if (coffees5 === 10) {
+                            coffees5 = 5;
+                            coffees20++;
+                            result.set('coffees', result.get('coffees').slice(0, -5));
+                            result.get('coffees5').pushObject(Ember.Object.create({ isNew: false }));
                         }
 
-                        if (coffees50 === 5) {
-                            coffees50 = 0;
-                            result.set('coffees10', []);
-                            result.get('coffees50').pushObject(Ember.Object.create({ isNew: false }));
+                        if (coffees20 === 8) {
+                            coffees20 = 4;
+                            result.set('coffees5', result.get('coffees').slice(0, -4));
+                            result.get('coffees20').pushObject(Ember.Object.create({ isNew: false }));
                         }
                     }, this);
 

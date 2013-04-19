@@ -671,7 +671,9 @@ h2 {
     position: absolute;
     z-index: 100;
     padding-top: 2px;
-    padding-left: 7px; }
+    padding-left: 7px;
+    text-align: center;
+    width: 16px; }
 
 .list-counter {
   text-align: right; }
