@@ -1,0 +1,71 @@
+/*
+Syntax error: Undefined variable: "$primary-font".
+        on line 19 of scss/base.scss
+
+14: html, body {
+15:     min-height: 100%;
+16: }
+17: 
+18: body {
+19:     font: 300 13px/1.5384 $primary-font;
+20: }
+21: 
+22: h1, h2, h3, h4 {
+23:     line-height: normal;
+24: }
+
+Backtrace:
+scss/base.scss:19
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/script/variable.rb:49:in `_perform'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/script/node.rb:40:in `perform'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/script/list.rb:71:in `block in _perform'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/script/list.rb:71:in `map'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/script/list.rb:71:in `_perform'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/script/node.rb:40:in `perform'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/root_node.rb:20:in `render'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/engine.rb:315:in `_render'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/engine.rb:262:in `render'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:235:in `watch'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/plugin.rb:107:in `method_missing'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/exec.rb:463:in `watch_or_update'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/exec.rb:326:in `process_result'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/exec.rb:41:in `parse'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/exec.rb:21:in `parse!'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/bin/sass:9:in `<top (required)>'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/bin/sass:19:in `load'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/bin/sass:19:in `<main>'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/bin/ruby_noexec_wrapper:14:in `eval'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/bin/ruby_noexec_wrapper:14:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$primary-font\".\A         on line 19 of scss/base.scss\A \A 14: html, body {\A 15:     min-height: 100%;\A 16: }\A 17: \A 18: body {\A 19:     font: 300 13px/1.5384 $primary-font;\A 20: }\A 21: \A 22: h1, h2, h3, h4 {\A 23:     line-height: normal;\A 24: }"; }

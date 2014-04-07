@@ -296,7 +296,7 @@ h2 small, .header-date, .action-now > dt, .action-prev > dt,
   color: #494d55; }
 
 a, .header-title span, .goodpoints-points > strong {
-  color: #00d9e1; }
+  color: #a1bde3; }
 
 .headline-section, .footer, .header {
   border: 2px solid #343941; }
@@ -316,7 +316,7 @@ a, .header-title span, .goodpoints-points > strong {
   background: black; }
 
 body {
-  color: black;
+  color: #fafafa;
   background: #fefefe; }
 
 a:hover, a:focus
@@ -344,7 +344,7 @@ input, button {
 input {
   outline: none;
   color: #fff;
-  background: black; }
+  background: #343941; }
   input.full {
     width: 100%; }
   input.is-error {
@@ -355,16 +355,16 @@ input {
 button {
   margin-right: 10px;
   letter-spacing: -1px;
-  color: white;
-  background: #00d9e1;
+  color: #1d232c;
+  background: #fbc91e;
   cursor: pointer; }
   button:hover, button:focus, button:active {
-    background: #00d9e1; }
+    background: #a1bde3; }
   button[disabled] {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     filter: alpha(opacity=50);
     opacity: 0.5;
-    background: #00d9e1 !important;
+    background: #fbc91e !important;
     cursor: default; }
   button.ico {
     position: relative;
@@ -393,13 +393,12 @@ h2, .headline, .headline-section, .footer, .header-date, .action-now > dt, .acti
     font-size: 13px; }
 
 h1 {
-  font-size: 50px;
-  color: black; }
+  font-size: 50px; }
 
 h2 {
   font-size: 14px;
   font-weight: normal;
-  color: black; }
+  color: #fff; }
   h2 small {
     margin-left: 1em;
     text-transform: none; }
@@ -413,12 +412,12 @@ h2 {
 .header {
   padding-top: 230px;
   min-height: 70px;
-  background: url("../images/logo.png") 100% 0px no-repeat; }
+  background: url("../images/logo.png") 100% 40px no-repeat; }
 
 .header-date {
   position: absolute;
   left: 0;
-  top: 15px; }
+  top: 20px; }
 
 .header-title {
   margin-top: 5px;
@@ -572,7 +571,7 @@ h2 {
   border-right: 1px solid #fefefe;
   font-size: 16px;
   color: #fff;
-  background: black; }
+  background: #343941; }
   .schedule > table {
     table-layout: fixed;
     width: 100%;
@@ -605,19 +604,16 @@ h2 {
   border-spacing: 0;
   border-top: 1px solid #343941;
   line-height: 1;
-  font-family: "Frutiger LT W01 65 Bold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-color: black; }
+  font-family: "Frutiger LT W01 65 Bold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
   .repos-list th, .repos-list td {
     padding: 24px 0 13px;
     border-bottom: 1px solid #333941; }
-  .repos-list a {
-    color: black; }
   .repos-list th {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     text-align: left;
-    font-size: 28px; }
+    font-size: 36px; }
     .repos-list th a {
       text-decoration: none; }
   .repos-list td {
@@ -647,7 +643,6 @@ h2 {
     content: '.'; }
 
 .coffee {
-  color: black;
   position: relative;
   float: left;
   width: 40px;
@@ -671,7 +666,7 @@ h2 {
   .coffee.new:after {
     clip: rect(40px, 40px, 40px, 0); }
   .coffee .num {
-    color: #fefefe;
+    color: black;
     font-size: 15px;
     position: absolute;
     z-index: 100;

@@ -1,5 +1,5 @@
 <div class="l-separated l-container">
-    <h2 class="headline">Repos/branches</h2>
+    <h2 class="headline">Projects</h2>
 
     <table class="repos-list">
 
@@ -10,7 +10,7 @@
     {{/each}}
     {{#if showSubmit}}
         <tr class="editable">
-            <th class="l-col-8">
+            <th class="l-col-8 repo-item">
             {{view Ember.TextField valueBinding="repo" classBinding=":full isRepoUrlValid::is-error" placeholder="Your repo here"}}
             </th>
             <td class="l-col-4"><button {{action submitRepo repo branch}} type="submit" {{bindAttr disabled="isSubmitDisabled"}}>Submit repo</button></td>

@@ -1,0 +1,54 @@
+/*
+Syntax error: Undefined mixin 'selection'.
+        on line 29 of scss/main.scss, in `selection'
+        from line 29 of scss/main.scss
+
+24: %separated-bottom {
+25:     @extend %separated;
+26:     border-width: 0 0 2px;
+27: }
+28: 
+29: @include selection(#fbc91e, #000);
+30: 
+31: body {
+32:     color: #fafafa;
+33:     background: $page-background;
+34: }
+
+Backtrace:
+scss/main.scss:29:in `selection'
+scss/main.scss:29
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:253:in `visit_mixin'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/tree/root_node.rb:20:in `render'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/engine.rb:315:in `_render'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/engine.rb:262:in `render'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:283:in `block in watch'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/vendor/listen/lib/listen/multi_listener.rb:108:in `call'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/vendor/listen/lib/listen/multi_listener.rb:108:in `on_change'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/vendor/listen/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/vendor/listen/lib/listen/adapter.rb:198:in `call'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/vendor/listen/lib/listen/adapter.rb:198:in `report_changes'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/vendor/listen/lib/listen/adapter.rb:210:in `poll_changed_dirs'
+/Users/petrvolny/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.12/vendor/listen/lib/listen/adapters/darwin.rb:38:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'selection'.\A         on line 29 of scss/main.scss, in `selection'\A         from line 29 of scss/main.scss\A \A 24: %separated-bottom {\A 25:     @extend %separated;\A 26:     border-width: 0 0 2px;\A 27: }\A 28: \A 29: @include selection(#fbc91e, #000);\A 30: \A 31: body {\A 32:     color: #fafafa;\A 33:     background: $page-background;\A 34: }"; }

@@ -1,8 +1,8 @@
-$page-background: #1d232c;
+$page-background: #fefefe;
 $line-color: #343941;
-$hightlighted-color: #a1bde3;
+$hightlighted-color: rgb(0,217,225);
 $important-color: #fbc91e;
-$box-background: #343941;
+$box-background: black;
 
 %muted {
     color: #494d55;
@@ -29,7 +29,7 @@ $box-background: #343941;
 @include selection(#fbc91e, #000);
 
 body {
-    color: #fafafa;
+    color: black;
     background: $page-background;
 }
 
@@ -79,7 +79,7 @@ button {
     @extend %form-item;
     margin-right: 10px;
     letter-spacing: -1px;
-    color: #1d232c;
+    color: white;
     background: $button-background;
     cursor: pointer;
 
@@ -129,13 +129,14 @@ button {
 
 h1 {
     font-size: 50px;
+    color: black;
 }
 
 h2 {
     @extend %headline;
     font-size: 14px;
     font-weight: normal;
-    color: #fff;
+    color: black;
 
     small {
         @extend %muted;
@@ -163,7 +164,7 @@ h2 {
     @extend %separated-bottom;
     padding-top: 230px;
     min-height: 70px;
-    background: url("../images/logo.png") 100% 40px no-repeat;
+    background: url("../images/logo.png") 100% 0px no-repeat;
 }
 
 .header-date {
@@ -171,7 +172,7 @@ h2 {
     @extend %muted;
     position: absolute;
     left: 0;
-    top: 20px;
+    top: 15px;
 }
 
 .header-title {
@@ -353,16 +354,20 @@ h2 {
     border-top: 1px solid #343941;
     line-height: 1;
     font-family: $primary-font-bold;
+    font-color: black;
 
     th, td {
         padding: 24px 0 13px;
         border-bottom: 1px solid #333941;
     }
+    a {
+        color: black;
+    }
 
     th {
         @include text-overflow();
         text-align: left;
-        font-size: 36px;
+        font-size: 28px;
 
         a {
             text-decoration: none;
@@ -395,6 +400,7 @@ h2 {
 
 .coffee {
     $coffee-size: 40px;
+    color: black;
 
     position: relative;
     float: left;
@@ -422,7 +428,7 @@ h2 {
     }
 
     .num {
-        color: black;
+        color: #fefefe;
         font-size: 15px;
         position: absolute;
         z-index: 100;
