@@ -1,4 +1,4 @@
-define(["ember"], function(Ember){
+define(["ember", 'moment'], function(Ember, moment){
     var TimeController = Ember.Controller.extend({
 
         actualTime: null,
@@ -12,7 +12,7 @@ define(["ember"], function(Ember){
         },
 
         currentTime: function() {
-            return this.get('actualTime') + this.get('offset');
+            return this.get('actualTime');// + this.get('offset');
         }.property('actualTime', 'offset'),
 
         _scheduleTimeRefresh: function() {
