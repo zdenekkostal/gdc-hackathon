@@ -5,15 +5,18 @@
 
     {{#each content}}
         <tr>
-            <th colspan="2"><a {{bindAttr href="url"}}>{{name}}</a></th>
+            <th colspan="3"><a {{bindAttr href="projectUrl"}}>{{title}}</a></th>
         </tr>
     {{/each}}
     {{#if showSubmit}}
         <tr class="editable">
             <th class="l-col-8 repo-item">
-            {{view Ember.TextField valueBinding="repo" classBinding=":full isRepoUrlValid::is-error" placeholder="Your repo here"}}
+            {{view Ember.TextField valueBinding="repoTitle" classes="full" placeholder="Project title"}}
             </th>
-            <td class="l-col-4"><button {{action submitRepo repo branch}} type="submit" {{bindAttr disabled="isSubmitDisabled"}}>Submit repo</button></td>
+            <th class="l-col-8 repo-item">
+            {{view Ember.TextField valueBinding="repo" classBinding=":full isRepoUrlValid::is-error" placeholder="Project page url"}}
+            </th>
+            <td class="l-col-4"><button {{action submitRepo repo repoTitle}} type="submit">Submit project</button></td>
         </tr>
     {{/if}}
     </table>

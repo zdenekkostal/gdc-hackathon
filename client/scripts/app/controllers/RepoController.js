@@ -14,8 +14,7 @@ define(["ember"], function(Ember) {
         findAll: function() {
             Ember.$.get('/repo', function(data) {
                 data.forEach(function(repo) {
-                    repo.name = repo.url.replace('https://github.com/', '');
-                    repo.name = repo.name.replace('/tree', '');
+                    repo.projectUrl = repo.url.indexOf('http://') !== -1 ? repo.url : 'http://'+repo.url;
                 });
 
                 this.set('content', data);
@@ -42,9 +41,11 @@ define(["ember"], function(Ember) {
             return !this._isGithubUri(repo);
         }.property('repo'),
 
-        submitRepo: function(repo) {
+        submitRepo: function(repo, repoTitle) {
+            debugger;
             var repoPayload = {
-                "url": repo
+                "url": repo,
+                'title': repoTitle
             };
 
             Ember.$.post("/repo", repoPayload).done(function() {
