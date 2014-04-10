@@ -14,32 +14,12 @@ define(["ember"], function(Ember) {
         findAll: function() {
             Ember.$.get('/repo', function(data) {
                 data.forEach(function(repo) {
-                    repo.projectUrl = repo.url.indexOf('http://') !== -1 ? repo.url : 'http://'+repo.url;
+                    repo.projectUrl = repo.url.indexOf('http://') !== -1 || repo.url.indexOf('https://') !== -1 ? repo.url : 'http://'+repo.url;
                 });
 
                 this.set('content', data);
             }.bind(this));
         },
-
-        _isGithubUri: function(uri) {
-            uri = uri || '';
-            return uri.match(/.+github\.com\/.+/)
-        },
-
-        isRepoUrlValid: function() {
-            var repo = this.get('repo') || '';
-
-            if (repo == '') {
-                return true;
-            }
-
-            return this._isGithubUri(repo);
-        }.property('repo'),
-
-        isSubmitDisabled: function() {
-            var repo = this.get('repo');
-            return !this._isGithubUri(repo);
-        }.property('repo'),
 
         submitRepo: function(repo, repoTitle) {
             debugger;
