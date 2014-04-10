@@ -1,18 +1,10 @@
 <div class="feed l-col-4">
-    <h2 class="headline-section">Feed <small>of #gdhackathon tweets</small></h2>
+    <h2 class="headline-section">Feed <small>of #alldatahack tweets</small></h2>
 
     <div class="feedItems">
-        {{#each content}}
-            <div class="feedItem">
-                <p>{{{tweet}}}</p>
-                <div class="feedItem-meta">
-                    <a {{bindAttr href="userUrl"}}>{{user}}</a>
-                    <!--<span>25 mins ago</span>-->
-                    <span>{{createdAtAgo}}</span>
-                </div>
-            </div>
-        {{/each}}
+        <a class="twitter-timeline" href="https://twitter.com/search?q=%23alldatahack" data-widget-id="454171672392646657">Tweets about "#alldatahack"</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </div>
 
-    <button class="ico" onclick="window.open('https://twitter.com/search?q=%23gdhackathon&src=hash');"><span class="ss-chat"></span> Twitter</button>
+    <button class="ico" onclick="window.open('https://twitter.com/search?q=%23alldatahack&src=hash');"><span class="ss-chat"></span> Twitter</button>
 </div>

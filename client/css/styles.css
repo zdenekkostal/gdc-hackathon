@@ -548,7 +548,7 @@ h2 {
   width: 100%; }
   .progressbar, .progressbar > div {
     height: 7px;
-    background: #343942 url("../images/progressbar.png") 0 0 repeat; }
+    background: #f1f1f1 url("../images/progressbar.png") 0 0 repeat; }
   .progressbar > div {
     background-color: #fbc91e;
     -webkit-animation-duration: 3s;
