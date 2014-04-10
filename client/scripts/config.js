@@ -4,10 +4,6 @@ define({
         'ember': {
             deps: ['handlebars', 'jquery', 'jquery.timeago', 'date'],
             exports: 'Ember'
-        },
-        'moment': {
-            deps: ['jquery'],
-            exports: 'moment'
         }
     },
     paths: {
@@ -19,6 +15,7 @@ define({
         /*libs*/
         'jquery': 'libs/jquery/1.9.1/jquery',
         'moment': 'libs/moment',
+        'moment-timezone': 'libs/moment-timezone',
         'handlebars': 'libs/handlebars/1.0.rc.3/handlebars',
         'ember': 'libs/ember/1.0.0-rc.2/ember',
         'date': 'libs/date.format',
