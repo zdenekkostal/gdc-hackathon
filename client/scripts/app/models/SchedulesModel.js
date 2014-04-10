@@ -19,7 +19,7 @@ define(["ember"], function(Ember){
             },
 
             {
-                start: new Date(2014, 3, 10, 13, 0),
+                start: new Date(2014, 3, 10, 12, 0),
                 title: '(22:00) Lunch / Late Snack'
             },
 
