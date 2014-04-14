@@ -8,7 +8,7 @@ define(["ember", 'moment'], function(Ember, moment){
 
         init: function() {
             this._setTime();
-            this._scheduleTimeRefresh();
+            //this._scheduleTimeRefresh();
         },
 
         currentTime: function() {
